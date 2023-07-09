@@ -9,3 +9,7 @@
 ##### My additional education:
 * 3d modeling courses at Knower School
 * Courses Project Manager at Geek Brainz
+
+###### My work experience
+1. Work as a teacher at a children's robotics school: September 2021 - January 2022
+2. Work in the Special Design Bureau "Titan": April 2022 - now
