@@ -1,0 +1,107 @@
+font-family: 'Nunito', sans-serif; 
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    /*Прижать footer снизу */
+    display: flex;
+    flex-direction: column; /* направление главной оси - вертикальное */
+    justify-content: space-between; /* justify-content - выравнивание элементов*/
+    /*Прижать footer снизу */
+
+    min-height: 100vh; /* минимальная высота body */
+    margin: 0; 
+    padding: 0 /* убираем прокрутку вертикальную */
+
+
+  }
+
+.header {
+    background-color: rgba(53, 180, 212, 0.267);
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100px;
+  }
+
+ .nav-list {
+    display: flex; /* элементы навигации в строку */
+    justify-content: flex-end; /* сдвиг вправо элементов */
+    align-items: center; /* выравнивание по центру */
+    list-style: none; /* убираем стандартные маркеры - точки */
+}
+
+.nav-link {
+    position: relative;
+    padding: 0 12px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #fff; 
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: -5px;
+    width: calc(100% - 24px);
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: .5s;
+  }
+  
+.nav-link:hover::after {
+    color: rgb(199, 12, 12);
+    opacity: 1;
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes slidein { /* функция подчеркивания */
+    from {
+      width: 0;
+    }
+    to {
+      width: calc(100% - 22px);
+    }
+  }
+
+.main {
+    margin-bottom: auto;
+  }
+
+.section-profile {
+    display: flex; /* контейнер с раскладкой флекс */
+    justify-content: space-around; /* выравнивание внутри флекс-контейнера */
+    width: 100%;
+    padding: 50px 30px 35px; /* внутренний отступ сверху 50, справа и слево 30, снизу 35 */
+    border-bottom: 10px solid rgba(43, 141, 165, 0.267);; /* отрисовка видимой границы блока */
+  }
+
+.section-profile-logo { /* настройки фото */
+    width: 180px;
+    height: 180px;
+    object-fit:cover; /*оформление фотки заполнением равномерным*/
+    border-radius: 170%; /*скругление фотографии*/
+    box-shadow: 0 20px 20px rgba(133, 123, 123, 0.6);
+    filter: grayscale(0.2) brightness(1,5);
+    transition: .1s;
+}
+
+.section-profile-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase; /* текст заглавными */
+}
+
